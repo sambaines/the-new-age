@@ -1,62 +1,343 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  .intro {
+    grid-area: 2 / 1 / 3 / 5;
+    padding: 64px 58px 0 48px;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  h1, h2 {
+    font-size: 4rem;
+    font-family: var(--body-text);
+    font-weight: 700;
+    color: var(--primary-light);
+    margin: 0;
+    position: relative;
+    left: -24px;
+  }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+  .work {
+    grid-area: 3 / 1 / 4 / 5;
+    padding: 96px 0 0 48px;
+  }
 
-	svg {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
+  h2 {
+    font-size: 2rem;
+  }
 
-	p {
-		margin: 1em auto;
-	}
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: var(--body-text);
+    font-weight: 400;
+    color: var(--primary-light);
+    letter-spacing: 0.075rem;
+  }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  .bold {
+    font-weight: 700;
+  }
+
+  .project {
+    padding-top: 24px;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+
+  .project-image {
+    background-color: var(--primary-dark);
+    width: 348px;
+    height: 280px;
+    box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 20px 12px -12px rgba(0, 0, 0, 0.12);
+    border-radius: 24px 4px 4px 4px;
+    position: relative;
+    left: -24px;
+  }
+
+  .project-image::after {
+    content: '';
+     height: 1px;
+     width: 4000px;
+     position: absolute;
+     background-color: var(--primary-dark);
+     left: -1900px;
+     top: 72px;
+     z-index: -1;
+  }
+
+  #blendedworldsbranding {
+    background-image: url("../blendedworldsbranding.png");
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-color: #DED8D6;
+  }
+
+  #emaildesignsystem {
+    background-image: url("../emaildesignsystem.png");
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-color: var(--primary-dark);
+  }
+
+  #landingpages {
+    background-image: url("../landingpages.png");
+    background-position: 20% 50%;
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-color: var(--primary-dark);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .project-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.075rem;
+    margin: 0;
+    padding: 1rem 0 0.25rem;
+    max-width: 280px;
+  }
+
+  .tags {
+    color: var(--accent-primary);
+    font-family: var(--body-text);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0.075rem;
+    padding-right: 3rem;
+  }
+
+  .writing {
+    grid-area: 4 / 1 / 5 / 5;
+    padding: 96px 0 0 0;
+  }
+
+  .writing h2 {
+    padding-left: 48px;
+  }
+
+  .article {
+    background-color: var(--primary-dark);
+    box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 20px 12px -12px rgba(0, 0, 0, 0.12);
+    border-radius: 24px 4px 4px 4px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem 1rem;
+    position: relative;
+    max-width: 380px;
+  }
+
+  .article::after {
+    content: '';
+     height: 1px;
+     width: 4000px;
+     position: absolute;
+     background-color: var(--primary-dark);
+     left: -1900px;
+     top: 32px;
+     z-index: -1;
+  }
+
+  .article-title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.075rem;
+    margin: 0 0 0.5rem 0;
+    padding: 1rem 0 0 0;
+    max-width: 320px;
+  }
+
+  .date {
+    color: var(--accent-primary);
+    font-family: var(--body-text);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: 0.06rem;
+    margin-top: 4px;
+  }
+
+  .category {
+    border-radius: 2px 2px 12px 2px;
+    color: var(--primary-dark);
+    font-family: var(--body-text);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.02rem;
+    text-align: center;
+    padding: 4px 16px 4px 12px;
+    position: absolute;
+    right: 1.5rem;
+  }
+
+  .redesign {
+    background-color: var(--accent-secondary);
+  }
+
+  .blendedworlds {
+    background-color: var(--accent-primary);
+  }
+
+  .contact {
+    grid-area: 5 / 1 / 6 / 5;
+	  padding: 64px 0 0 48px;
+  }
+
+  .contact-button {
+    background-color: var(--accent-primary);
+    padding: 1rem 1.5rem 0.8rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 20px 12px -12px rgba(0, 0, 0, 0.12);
+    border-radius: 16px 4px 4px 4px;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-dark);
+    font-family: var(--body-text);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.04rem;
+    position: relative;
+    left: -24px;
+  }
+
+
+  @media screen and (min-width: 1048px) {
+    .intro {
+        grid-area: 2 / 2 / 3 / 6;
+        max-width: 542px;
+        padding: 64px 48px 0;
+      }
+
+    .work {
+      grid-area: 3 / 2 / 4 / 6;
+    }
+
+    .project-image {
+      width: 620px;
+      height: 400px;
+    }
+
+    #blendedworldsbranding, #emaildesignsystem, #landingpages {
+      background-size: 100%;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      max-width: 520px;
+      padding: 1.25rem 0 0.5rem;
+    }
+
+    .writing {
+      grid-area: 4 / 2 / 5 / 6;
+    }
+
+    .article {
+      margin-left: 24px;
+    }
+
+    .contact {
+      position: fixed;
+      bottom: 10vh;
+      right: 6vw;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .contact {
+      right: 10vw;
+    }
+
+}
+
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Hey, I'm Sam!</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<div class="intro">
+  <h1>HEY</h1>
+  <p>I'm Sam.</p>
+  <p>A <span class="bold">designer, developer and creator</span>. I have a passion for building products that add a little bit of joy to the mundane.</p>
+  <p>I currently have a focus on <span class="bold">headless commerce</span> and <span class="bold">building tooling</span> to bridge the gap between design and development.</p>
+  <p>If your looking for a designer to bring something to life -- <span class="bold">let’s chat!</span></p>
+</div>
 
-<figure>
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svelte" x="0px" y="0px" viewBox="0 0 519 139" style="enable-background:new 0 0 519 139;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#159497;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#4A4A55;}
-</style>
-<path id="back" class="st0" d="M110.2,28.4C99.8,13.5,79.3,9.1,64.4,18.6L38.4,35.2c-7.1,4.5-12,11.7-13.5,20  c-1.2,6.9-0.2,14,3.1,20.2c-2.2,3.4-3.8,7.2-4.5,11.2c-1.5,8.4,0.5,17.1,5.5,24.1c10.4,14.9,30.9,19.3,45.8,9.8l26.1-16.6  c7.1-4.5,12-11.7,13.5-20c1.2-6.9,0.1-14-3.1-20.2c2.2-3.4,3.8-7.2,4.5-11.2C117.2,44.1,115.2,35.5,110.2,28.4"/>
-<path id="front" class="st1" d="M61.9,112.2c-8.4,2.2-17.3-1.1-22.2-8.2c-3-4.2-4.2-9.4-3.3-14.5c0.1-0.8,0.4-1.6,0.6-2.4l0.5-1.5  l1.3,1c3.1,2.2,6.5,4,10.2,5.1l1,0.3l-0.1,1c-0.1,1.4,0.3,2.7,1.1,3.8c1.5,2.1,4.2,3.1,6.7,2.5c0.6-0.2,1.1-0.4,1.6-0.7l26-16.6  c1.3-0.8,2.2-2.1,2.4-3.6c0.3-1.5-0.1-3.1-1-4.4c-1.5-2.1-4.2-3.1-6.7-2.5c-0.6,0.2-1.1,0.4-1.6,0.7l-10,6.3c-1.6,1-3.4,1.8-5.3,2.3  c-8.4,2.2-17.3-1.1-22.2-8.2c-3-4.2-4.2-9.4-3.2-14.5c0.9-5,3.8-9.4,8.1-12.1L72,29.3c1.6-1,3.4-1.8,5.3-2.3  c8.4-2.2,17.3,1.1,22.2,8.2c3,4.2,4.2,9.4,3.3,14.5c-0.2,0.8-0.4,1.6-0.6,2.4l-0.5,1.5l-1.3-1c-3.1-2.3-6.5-4-10.2-5.1l-1-0.3l0.1-1  c0.1-1.4-0.3-2.8-1.1-3.9c-1.5-2.1-4.2-3.1-6.7-2.4c-0.6,0.2-1.1,0.4-1.6,0.7L53.8,57.3c-1.3,0.8-2.2,2.1-2.5,3.6  c-0.3,1.5,0.1,3.1,1,4.4c1.5,2.1,4.1,3.1,6.7,2.5c0.6-0.2,1.1-0.4,1.6-0.7l10-6.3c1.6-1,3.4-1.8,5.3-2.3c8.4-2.2,17.3,1.1,22.2,8.2  c3,4.2,4.2,9.4,3.3,14.5c-0.9,5-3.8,9.4-8.1,12.1l-26.1,16.6C65.6,110.9,63.8,111.7,61.9,112.2"/>
-<g>
-	<path class="st2" d="M150.8,85.9l8.3-3.1c2.5,5.4,7.3,9,13.7,9c6.5,0,10.8-3.2,10.8-9.2c0-6.5-6.5-8.8-13.5-11.2   c-8.3-3-17.4-6.2-17.4-17.1c0-8.4,6.9-15.6,19-15.6c10.1,0,16.4,5,18.4,11.8l-8.2,2.7c-1.4-3.4-5.1-6-10.9-6   c-5.7,0-9.1,2.6-9.1,7.2c0,4.9,5.5,6.8,12,9c8.6,3.2,18.8,6.8,18.8,19.2c0,11.4-8.9,17.8-20.4,17.8   C161.9,100.4,153.8,94.8,150.8,85.9z"/>
-	<path class="st2" d="M241,85.7h-24.1l-4.9,13.7h-9.2l21.5-59.6h9.1L255,99.4h-9.2L241,85.7z M231,57.6c-0.7-1.9-1.6-4.7-2-6.7   c-0.5,2-1.4,4.8-2,6.7l-7.3,20.3h18.6L231,57.6z"/>
-	<path class="st2" d="M268.3,39.8h23.9c14.6,0,19.7,9.3,19.7,18.2c0,8.3-5.5,18.2-19.7,18.2h-15.1v23.2h-8.9V39.8z M302.8,58   c0-4.2-2.1-9.7-10-9.7h-15.6v19.4h15.6C300.2,67.7,302.8,62.6,302.8,58z"/>
-	<path class="st2" d="M326,39.8h23.9c14.6,0,19.7,9.3,19.7,18.2c0,8.3-5.5,18.2-19.7,18.2h-15.1v23.2H326V39.8z M360.4,58   c0-4.2-2.1-9.7-10-9.7h-15.6v19.4h15.6C357.9,67.7,360.4,62.6,360.4,58z"/>
-	<path class="st2" d="M383.7,39.8h37v8.3h-28.1v16.4h18.1v8.3h-18.1V91h30v8.3h-38.8V39.8z"/>
-	<path class="st2" d="M438.7,39.8h25.1c14.6,0,19.2,8.7,19.2,17.6c0,6.9-3.8,14.5-12.9,16.9l12.3,25.1h-10.1L460.5,75h-12.9v24.4   h-8.9V39.8z M464,66.5c7.4,0,9.9-4.5,9.9-9.1c0-4.2-2-9.1-9.9-9.1h-16.4v18.2H464z"/>
-</g>
-</svg>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<div class="work" id="work">
+  <h2>Work</h2>
+  <div class="project">
+    <div class="project-image" id="landingpages">
+    </div>
+    <p class="project-title">
+      <a href="/work/landingpages">
+        A Collection of Landing Page Designs
+      </a>
+    </p>
+    <span class="tags">Web Design, Marketing, UI/UX</span>
+  </div>
+  <div class="project">
+    <div class="project-image" id="emaildesignsystem">
+    </div>
+    <p class="project-title">
+      <a href="/work/emaildesignsystem">
+        Building a Modular Set of Email Components to Improve Workflow
+      </a>
+    </p>
+    <span class="tags">Tooling, Email Design, Design Systems</span>
+  </div>
+  <div class="project">
+    <div class="project-image" id="blendedworldsbranding">
+    </div>
+    <p class="project-title">
+      <a href="/work/blendedworldsbranding">
+        Designing the Blended Worlds Branding & Identity System
+      </a>
+    </p>
+    <span class="tags">Branding, Visual Identity, Guidelines</span>
+  </div>
+</div>
 
-<p><strong>Go to <a href="/blog">/blog</a> to see content loaded from <a href="https://www.sanity.io">Sanity</a></strong></p>
+<div class="writing" id="writing">
+  <h2>Writing</h2>
+  <a href="/writing/whenpushcomestoshove">
+    <div class="article">
+        <p class="article-title">When push comes to shove, build a new site.</p>
+        <span class="date">1st October</span>
+        <span class="category redesign">REDESIGN</span>
+    </div>
+  </a>
+  <!--
+  <a href="/">
+    <div class="article">
+        <p class="article-title">When push comes to shove, build a new site</p>
+        <span class="date">24th Sept</span>
+        <span class="category redesign">REDESIGN</span>
+    </div>
+  </a>
+  <a href="/">
+    <div class="article">
+        <p class="article-title">When push comes to shove, build a new site</p>
+        <span class="date">24th Sept</span>
+        <span class="category blendedworlds">Blended Worlds</span>
+    </div>
+  </a> -->
+</div>
+
+
+<div class="contact">
+  <h2>Let's Chat</h2>
+  <a class="contact-button" href="mailto:heysambaines@gmail.com" target="_blank">heysambaines@gmail.com</a>
+</div>
+
+
