@@ -45,6 +45,8 @@
   .social ul li {
     display: inline-block;
     margin: 0 0.25rem;
+    width: 24px;
+    height: 24px;
   }
 
   .social svg:hover > * {
