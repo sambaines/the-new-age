@@ -90,6 +90,14 @@
     background-color: var(--primary-dark);
   }
 
+  #eclecticcharmdesign {
+    background-image: url("../eclecticcharmdesign.png");
+    background-position: 10% 50%;
+    background-size: 125%;
+    background-repeat: no-repeat;
+    background-color: var(--primary-dark);
+  }
+
   img {
     width: 100%;
   }
@@ -226,7 +234,7 @@
       height: 400px;
     }
 
-    #blendedworldsbranding, #emaildesignsystem, #landingpages {
+    #blendedworldsbranding, #emaildesignsystem, #landingpages, #eclecticcharmdesign {
       background-size: 100%;
     }
 
@@ -276,6 +284,16 @@
 
 <div class="work" id="work">
   <h2>Work</h2>
+  <div class="project">
+    <div class="project-image" id="eclecticcharmdesign">
+    </div>
+    <p class="project-title">
+      <a href="/work/eclecticcharmdesign">
+        Designing an E-commerce Store for Jewellery - Eclectic Charm
+      </a>
+    </p>
+    <span class="tags">Web Design, UI/UX, Headless Commerce</span>
+  </div>
   <div class="project">
     <div class="project-image" id="landingpages">
     </div>
