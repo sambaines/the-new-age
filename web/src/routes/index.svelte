@@ -191,6 +191,10 @@
     background-color: var(--accent-secondary);
   }
 
+  .work-cat {
+    background-color: var(--secondary-light);
+  }
+
   .blendedworlds {
     background-color: var(--accent-primary);
   }
@@ -328,6 +332,13 @@
 
 <div class="writing" id="writing">
   <h2>Writing</h2>
+  <a href="/writing/buildingaswatchsystem">
+    <div class="article">
+        <p class="article-title">Building a swatch system using Figma and Sass Lists</p>
+        <span class="date">8th October</span>
+        <span class="category work-cat">WORK</span>
+    </div>
+  </a>
   <a href="/writing/whenpushcomestoshove">
     <div class="article">
         <p class="article-title">When push comes to shove, build a new site.</p>
@@ -341,13 +352,6 @@
         <p class="article-title">When push comes to shove, build a new site</p>
         <span class="date">24th Sept</span>
         <span class="category redesign">REDESIGN</span>
-    </div>
-  </a>
-  <a href="/">
-    <div class="article">
-        <p class="article-title">When push comes to shove, build a new site</p>
-        <span class="date">24th Sept</span>
-        <span class="category blendedworlds">Blended Worlds</span>
     </div>
   </a> -->
 </div>

@@ -179,8 +179,8 @@
   <p>Moving the client to Shopify Lite helped to reduce the monthly costs <span class="bold">from £20 down to around £7</span>, which is a big deal for a small handmade business. Alongside
   this the site has increased custom functionality and page load speed was increased by a little under half a second. But the main positive was the client had a fully custom, branded
   store with full control for the future.</p>
-  <p>The detail for custom swatches on the product details page came to life with a little bit of difficulty and required a bit of work but the outcome made a visible
-    difference which really gets across the detail in each product variant.
+  <p>The detail for custom swatches on the product details page came to life but required <a href="/writing/buildingaswatchsystem">a little bit of SASS list magic to work</a>. The outcome made a visible
+    difference which really gets across the detail in each product variant, hopefully leading to more engagement and easier product selection for orders.
   </p>
   <img class="inline-image" src="/ec-ui-swatches.png" alt="The built product details page with custom swatches." />
   <span class="caption">The built product details page with custom swatches.</span>
